@@ -1,0 +1,56 @@
+footer{
+    padding: 40px 12px;
+    background-color: var(--color-footer-bg);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.45rem;
+    align-items: center;
+    color: #fff;
+}
+
+.list-icon li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+footer h3{
+    margin-bottom: 2rem;
+}
+
+.newltter form{
+    max-width: 350px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+}
+
+.newltter form input{
+    width: 100%;
+    padding: .90rem 2rem;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+
+.newltter form input::placeholder{
+    color: #fff;
+}
+
+.copy{
+
+    width: 100%;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+@media (min-width:1042px){
+    footer{
+       grid-template-columns: repeat(3,1fr);
+       gap:150px;
+    }
+}

@@ -1,0 +1,91 @@
+header{
+    width: 100%;
+    max-width: inherit;
+    margin: auto;
+    height: 100px;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+    z-index: 22222;    
+}
+
+.logo img{
+    max-width: 150px;
+    width: 100%;
+
+}
+
+.list-menu{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--color-primary);
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    gap: 1rem;
+    transition: .3s;   
+}
+
+
+.list-menu li a{
+    color: #fff;
+}
+
+.list-menu.open{
+    opacity: 1;
+    pointer-events: visible;  
+}
+
+
+.toggle{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+}
+
+.toggle .line{
+    border-top: 3px solid #fff;
+    width: 100%;
+    display: block;
+}
+
+.toggle .line::before,
+.toggle .line::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    display: block;
+    background-color: #fff;
+    margin-top: 5px;
+}
+
+@media (min-width:1042px){
+    .toggle{
+        display: none;
+    }
+
+    .list-menu{
+        opacity: 1;
+        pointer-events: visible;
+        top: 50%;
+        flex-direction: row;
+        height: 0px;
+        gap: 1.5rem;
+    }
+
+    .list-menu li a{
+        font-size: 1.1rem;
+    }
+}

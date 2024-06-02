@@ -1,0 +1,49 @@
+.contatc{
+    padding: 120px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contatc form{
+    max-width: 450px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.contatc form .input-box{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.contatc form input{
+    padding: 0.90rem;
+    width: 100%;
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+}
+
+.contatc form textarea{
+    border: 2px solid var(--color-primary);
+    height: 150px;
+}
+
+.contatc form button{
+    background-color: var(--color-primary);
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    color: #fff;
+}
+
+@media (min-width:1042px){
+   .contatc form .input-box{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
